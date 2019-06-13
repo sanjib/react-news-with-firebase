@@ -6,10 +6,12 @@ import ForgotPassword from "./ForgotPassword";
 import SearchLinks from "./SearchLinks";
 import LinkList from "./LinkList";
 import LinkDetail from "./LinkDetail";
+import Header from "./Header";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <Header />
       <Switch>
         <Redirect exact from="/" to="/new/1" />
         {/*<Route*/}
