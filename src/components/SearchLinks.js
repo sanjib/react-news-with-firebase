@@ -1,7 +1,7 @@
 import React from "react";
 
 const SearchLinks = () => {
-  return <div />;
+  return <div>Search</div>;
 };
 
 export default SearchLinks;

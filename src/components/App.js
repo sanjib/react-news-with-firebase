@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { Container } from "semantic-ui-react";
+
 import CreateLink from "./CreateLink";
 import Login from "./Login";
 import ForgotPassword from "./ForgotPassword";
@@ -12,23 +14,25 @@ const App = () => {
   return (
     <BrowserRouter>
       <Header />
-      <Switch>
-        <Redirect exact from="/" to="/new/1" />
-        {/*<Route*/}
-        {/*  exact*/}
-        {/*  path="/"*/}
-        {/*  render={() => {*/}
-        {/*    return <Redirect to="/new/1" />;*/}
-        {/*  }}*/}
-        {/*/>*/}
-        <Route path="/create" component={CreateLink} />
-        <Route path="/login" component={Login} />
-        <Route path="/forgot" component={ForgotPassword} />
-        <Route path="/search" component={SearchLinks} />
-        <Route path="/top" component={LinkList} />
-        <Route path="/new/:page" component={LinkList} />
-        <Route path="/link/:linkId" component={LinkDetail} />
-      </Switch>
+      <Container style={{ marginTop: "4rem" }}>
+        <Switch>
+          <Redirect exact from="/" to="/new/1" />
+          {/*<Route*/}
+          {/*  exact*/}
+          {/*  path="/"*/}
+          {/*  render={() => {*/}
+          {/*    return <Redirect to="/new/1" />;*/}
+          {/*  }}*/}
+          {/*/>*/}
+          <Route path="/create" component={CreateLink} />
+          <Route path="/login" component={Login} />
+          <Route path="/forgot" component={ForgotPassword} />
+          <Route path="/search" component={SearchLinks} />
+          <Route path="/top" component={LinkList} />
+          <Route path="/new/:page" component={LinkList} />
+          <Route path="/link/:linkId" component={LinkDetail} />
+        </Switch>
+      </Container>
     </BrowserRouter>
   );
 };
