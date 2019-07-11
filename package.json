@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.5.4",
     "lodash": "4.17.4",
     "lodash.template": "4.5.0",
     "react": "^16.8.6",
