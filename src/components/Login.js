@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Button } from "semantic-ui-react";
 
 const Login = () => {
-  const [login, setLogin] = React.useState(true);
+  const [login, setLogin] = useState(true);
   return (
     <div>
       <h3>{login ? "Login" : "Create Account"}</h3>
@@ -24,10 +24,16 @@ const Login = () => {
           />
         </Form.Field>
         <Form.Field>
-          <Form.Input label="Enter Password" type="password" />
+          <Form.Input
+            label="Password"
+            placeholder="Enter your password"
+            type="password"
+          />
         </Form.Field>
         <Form.Field />
-        <Button type="submit">Submit</Button>
+        <Button primary type="submit" style={{ backgroundColor: "black" }}>
+          Submit
+        </Button>
         <Button type="button" onClick={() => setLogin(prevLogin => !prevLogin)}>
           {login ? "Need to create account?" : "Already have an account?"}
         </Button>
